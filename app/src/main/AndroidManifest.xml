@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arachnid_2nd_trial">
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".Main2Activity"
             android:exported="true"
             android:label="@string/app_name"

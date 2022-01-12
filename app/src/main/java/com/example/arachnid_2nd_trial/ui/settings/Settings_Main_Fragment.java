@@ -1,4 +1,4 @@
-package com.example.arachnid_2nd_trial.ui.slideshow;
+package com.example.arachnid_2nd_trial.ui.settings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,24 +12,23 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.arachnid_2nd_trial.R;
 import com.example.arachnid_2nd_trial.databinding.FragmentSlideshowBinding;
 
-public class SlideshowFragment extends Fragment {
+public class Settings_Main_Fragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private SettingsViewModel settingsViewModel;
     private FragmentSlideshowBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        settingsViewModel =
+                new ViewModelProvider(this).get(SettingsViewModel.class);
 
         binding = FragmentSlideshowBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        settingsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
