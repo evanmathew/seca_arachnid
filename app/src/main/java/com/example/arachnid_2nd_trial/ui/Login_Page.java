@@ -51,6 +51,15 @@ public class Login_Page extends AppCompatActivity {
                 if(username.equals("seca") && password.equals("123")) {
                     Toast.makeText(getApplicationContext(), "Welcome, " + username, Toast.LENGTH_SHORT).show();
 
+                    /*
+                    SQL service to check "username" & "password" from "login_table"
+                     */
+
+                    /*
+                    SQL service to send "username" & "status = 'active' " to "status_table"
+                     */
+
+
                     Intent intent = new Intent(Login_Page.this, Main2Activity.class);
                     startActivity(intent);
                     finish();
