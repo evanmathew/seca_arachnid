@@ -2,6 +2,7 @@ package com.example.arachnid_2nd_trial.ui;
 
 
 import android.content.Intent;
+import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -11,7 +12,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.arachnid_2nd_trial.Main2Activity;
+import com.example.arachnid_2nd_trial.Profile;
 import com.example.arachnid_2nd_trial.R;
+import com.example.arachnid_2nd_trial.ui.home.HomeFragment;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class Login_Page extends AppCompatActivity {
