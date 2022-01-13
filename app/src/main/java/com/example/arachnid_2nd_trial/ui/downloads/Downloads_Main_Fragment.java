@@ -12,28 +12,22 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.arachnid_2nd_trial.databinding.FragmentGalleryBinding;
+import com.example.arachnid_2nd_trial.databinding.FragmentDownloadsBinding;
 
 public class Downloads_Main_Fragment extends Fragment {
 
     private Download_ViewModel downloadViewModel;
-    private FragmentGalleryBinding binding;
+    private FragmentDownloadsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         downloadViewModel =
                 new ViewModelProvider(this).get(Download_ViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentDownloadsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        downloadViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 
